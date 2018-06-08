@@ -1,0 +1,23 @@
+{include file="public/header"/}
+<div style="background-image:url('/static/images/store/{$store.back}');" class="back-full">
+    {include file="public/nav"/}
+    <div class="container" style="margin-top:20px;">
+        <div class="col-sm-4">
+            <h3 style="margin-bottom:30px;">{$store.name}</h3>
+            <p>店铺地址：{$store.address}</p>
+            <p>联系电话：{$store.tel}</p>
+            <img class="img-responsive" src="/static/images/store/{$store.img}">
+        </div>
+        <div class="col-sm-8">
+            <h3 style="margin-bottom:110px;">团队介绍：</h3>
+            {volist name="team" id="vo"}
+                <div class="col-xs-6 col-sm-3 text-center" style="margin-bottom:20px;">
+                    <img class="img-responsive" src="/static/images/store/{$vo.img}">
+                    {$vo.name}
+                </div>
+                
+            {/volist}
+        </div>
+    </div>
+</div>
+{include file="public/footer"/}
