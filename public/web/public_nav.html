@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><img style="margin-left:48px; margin-right:50px; margin-top:-10px; height:100%; transform: scale(3,3);" src="/static/images/logo.png"></a>
+        <a class="navbar-brand" href="/"><img style="margin-top:-20px; height:52px;" src="/static/images/logo.png"></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
@@ -27,7 +27,7 @@
                     <li><a href="/welfare.html">企业福利</a></li>
                 </ul>
             </li>
-            <li class="drowdown">
+            <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">创业团队</a>
                 <ul class="dropdown-menu">
                     <li><a href="/chairman.html">董事长</a></li>
@@ -52,7 +52,7 @@
                     <li><a href="/introfny.html">法妮雅造型</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">门店信息</a>
                 <ul class="dropdown-menu">
                     <li  class="offset-right dropdown">
@@ -78,6 +78,7 @@
                     <li class="offset-right dropdown">
                         <a href="#" class="dropdown-toggle">朝阳区</a>
                         <ul class="dropdown-menu">
+                            <li><a href="/store.html?name=mz">麦子店</a></li>
                             <li><a href="/store.html?name=sj">双井店</a></li>
                             <li><a href="/store.html?name=dwl">大望路店</a></li>
                             <li><a href="/store.html?name=sfy">石佛营店</a></li>
@@ -87,7 +88,7 @@
                     <li class="offset-right dropdown">
                         <a href="#" class="dropdown-toggle">丰台区</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/store.html?name=mz">麦子店</a></li>
+                            
                         </ul>
                     </li>
                     <li><a href="">昌平区</a></li>
@@ -114,3 +115,12 @@
         </ul>
     </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        $('.dropdown').hover(function(){
+            $(this).addClass("open");
+        },function(){
+            $(this).removeClass("open");
+        });
+    });
+</script>
