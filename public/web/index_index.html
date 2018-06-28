@@ -1,12 +1,12 @@
 {include file="public/header"/}
-<div style="background-image:url('/static/images/1-0.png');" class="back-full">
+<div style="background-image:url('/static/images/1-0.jpg');" class="back-full">
     {include file="public/nav"/}
     <div class="container">
-        <div class="right-div">
+        <div class="back-div pull-right col-md-6">
             <h3>企业简介</h3>
             <h5>ENTERPRISE INTRODUCTION</h5>
             <div class="con-hr"></div>
-            <p style="line-height:30px;">
+	    <p> 
 	    　　北京木子美业投资管理有限公司，成立于2009年，在北京拥有30余家直营连锁店，旗下有三家子公司：”木子造型”、“木子护肤造型”、“法妮雅高端品牌教育机构”，形成美容美发、形象设计、美体塑形、养生保健、教育培训、市场营销为一体的大型综合性美容美发连锁机构，拥有完整的产业链。<br>
 
        　　经过多年的不断耕耘和探索，我们不仅得到专家和同行的认可，更在广大消费者心目中留下深刻的印象和良好的口碑。因为我们秉承“做强做大”的发展理念，力求提高我们的品牌品质，技术服务标准。因为我们始终遵循顾客的需求就是我们的服务标准，为顾客着想，为他们设计美，创造美，是我们义不容辞的责任。<br>
@@ -17,5 +17,18 @@
 	    </p>
         </div>
     </div>
+    <div class='back-full loading'>
+	    <p style="text-align:center; margin-top:35%;">专 注 发 展  1 0 年 美 业 ， 创 造 美 的 文 化 ， 引 领 美 的 事 业</p>
+    </div>
 </div>
-{include file="public/footer"/}
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script>
+		setTimeout(function(){$('.loading').animate({opacity:'0'},3000,function(){
+		$('.loading').remove();
+		})},2000);	
+			
+	</script>
+</body>
+</html>

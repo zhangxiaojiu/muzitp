@@ -1,3 +1,62 @@
+<style>
+.nav .open a{border-bottom:0px !important}
+.nav .open a:hover{
+	border-bottom:0px !important;
+}
+.border-line {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    background: none;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 0px transparent;
+}
+
+.border-line::after,
+.border-line::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.border-line::after {
+    top: 0;
+    left: 0;
+    -webkit-transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s;
+    transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s;
+}
+
+.border-line::before {
+    bottom: 0;
+    right: 0;
+    -webkit-transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.2s, height 0.2s ease-in;
+    transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.2s, height 0.2s ease-in;
+}
+
+.border-line:hover::after,
+.border-line:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.border-line:hover::after {
+    border-top-color: #fff;
+    border-right-color: #fff;
+    -webkit-transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
+    transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
+}
+
+.border-line:hover::before {
+    border-bottom-color: #fff;
+    border-left-color: #fff;
+    -webkit-transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
+    transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
+}
+</style>
 <div class="container" style="padding-top:30px;">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -10,7 +69,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li class="dropdown">
+            <li class="dropdown border-line">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">企业简介</a>
                 <ul class="dropdown-menu">
                     <li><a href="/intromz.html">木子简介</a></li>
@@ -19,7 +78,7 @@
                     <li><a href="/culture.html">企业文化</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown border-line">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">加入木子</a>
                 <ul class="dropdown-menu">
                     <li><a href="/recruit.html">招聘信息</a></li>
@@ -27,7 +86,7 @@
                     <li><a href="/welfare.html">企业福利</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown border-line">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">创业团队</a>
                 <ul class="dropdown-menu">
                     <li><a href="/chairman.html">董事长</a></li>
@@ -44,7 +103,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown border-line">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">旗下品牌</a>
                 <ul class="dropdown-menu">
                     <li><a href="/mzhair.html">木子造型</a></li>
@@ -52,7 +111,7 @@
                     <li><a href="/introfny.html">法妮雅造型</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown border-line">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">门店信息</a>
                 <ul class="dropdown-menu">
                     <li  class="offset-right dropdown">
@@ -96,7 +155,7 @@
                     <li><a href="">大兴区</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown border-line">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">体验服务</a>
                 <ul class="dropdown-menu">
                     <li><a href="/service.html">剪发</a></li>

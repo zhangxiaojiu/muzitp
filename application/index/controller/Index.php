@@ -9,9 +9,15 @@ class Index extends Controller
     {
         $this->assign('title','木子企业');
     }
+    //页面载入
+    public function loading()
+    {
+    	return $this->fetch();
+    }
     //企业简介
     public function index()
     {
+
         return $this->fetch();
     }
     //木子简介

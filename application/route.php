@@ -36,6 +36,7 @@ return [
         'introfny'  =>  'index/index/introfny',
         'service'  =>  'index/index/service',
         'store'  =>  'index/index/store',
+        'loading'  =>  'index/index/loading',
     ],
 
 ];

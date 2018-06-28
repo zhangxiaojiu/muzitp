@@ -15,7 +15,7 @@
         body{background:#000;color:#fff;}
         a{color:#fff;}
         .img-responsive{width:100%;}
-        .back-full{
+        .back-full,.back-left{
             /*box-shadow: inset 0 0 90px #333;*/
             background: -webkit-linear-gradient(#333, #000); /* Safari 5.1 - 6.0 */
             background: -o-linear-gradient(#333, #000); /* Opera 11.1 - 12.0 */
@@ -23,27 +23,18 @@
             background: linear-gradient(#333, #000); /* 标准的语法 */
             background-repeat: no-repeat;
         }
-        @media (min-width: 1101px){
-            .back-full{
-                background-size:100% auto;
-            }
-        }
-        @media (max-width: 1100px){
-            .back-full{
-                background-size:auto 100%;
-            }
-        }
+	.loading{
+		background:url('/static/images/loading.jpg');
+		position:absolute;
+		top:0px;
+		opacity:1;
+	}
         @media (max-width: 992px){
             .navbar-right{
                 visibility:hidden;
             }
         }
-        @media(max-width: 1280px){
-            .back-full{min-height:700px;}
-        }
-        @media(min-width:1281px){
-            .back-full{min-height:1060px;}
-        }
+        
         /*nav*/
         .nav>li>a{border-bottom:2px solid rgba(0,0,0,0);}
         .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{background-color:rgba(0,0,0,0);}
@@ -53,34 +44,13 @@
         .navbar-toggle, .navbar-toggle .icon-bar{border:1px solid #fff;}
 
         /*con*/
-        @media (min-width: 586px){
-            .right-div{
-                width:586px;
-            }
-            .left-div{
-                width:400px;
-            }
-        }
-        @media (max-width: 586px){
-            .right-div,.left-div{
-                width:100%;
-            }
-        }
-        .left-div{float:left;}
-        .right-div{
-            background:#000;
-            opacity:0.6;
-            float:right;
-            border-radius:5px;
-            padding:10px;
-            margin-top:60px;
-        }
         .back-div{
             background:#000;
-            opacity:0.6;
+            opacity:0.7;
             border-radius:5px;
             padding:10px;
             margin-top:30px;
+		position:relative;
         }
         .con-hr{
             width:100px; height:30px; border-top:2px solid #fff;
@@ -152,5 +122,78 @@
             left: 100%;
         }
     </style>
+<script>
+$(function(){
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	var s = 1.78;
+	autoBack(w,h,s);
+	
+	var num = Math.round(Math.random()*10);
+	animateNum(num);
+});
+$(window).resize(function ()
+{
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	var s = 1.78;
+	autoBack(w,h,s);
+});
+	
+function autoBack(w,h,s){
+	$('.back-full').css({"width":w+'px',"height":h+'px'});
+	$('.back-left').css({"width":w+'px',"height":h+'px'});
+	if(w/h > s){
+		$('.back-full').css("background-size","100% auto");		
+	}else{
+		$('.back-full').css({"background-size":"auto 100%","background-position":"50% 0"});		
+	}	
+	$('.back-left').css({"background-size":"auto 100%","background-position":"0 0"});		
+}
+function animateNum(r){
+	switch(r)
+	{
+	case 1:
+		$('.back-div').css('left','800px');
+		$('.back-div').animate({left:'0px'},3000);
+		break;
+	case 2:
+		$('.back-div').css('right','1500px');
+		$('.back-div').animate({right:'0px'},3000);
+		break;
+	case 3:
+		$('.back-div').css('top','500px');
+		$('.back-div').animate({top:'0px'},3000);
+		break;
+	case 4:
+		$('.back-div').css('bottom','500px');
+		$('.back-div').animate({bottom:'0px'},3000);
+		break;
+	case 5:
+		$('.back-div').css('left','800px');
+		$('.back-div').animate({left:'-200px'},1500);
+		$('.back-div').animate({left:'0px'},1500);
+		break;
+	case 6:
+		$('.back-div').css('right','1500px');
+		$('.back-div').animate({right:'-200px'},1500);
+		$('.back-div').animate({right:'0px'},1500);
+		break;
+	case 7:
+		$('.back-div').css('top','500px');
+		$('.back-div').animate({top:'-50px'},1500);
+		$('.back-div').animate({top:'0px'},1500);
+		break;
+	case 8:
+		$('.back-div').css('bottom','500px');
+		$('.back-div').animate({bottom:'-50px'},1500);
+		$('.back-div').animate({bottom:'0px'},1500);
+		break;
+	default:
+		$('.back-div').css('opacity','0');
+		$('.back-div').animate({opacity:'0.7'},3000);
+	}
+	}
+</script>
 </head>
 <body>
