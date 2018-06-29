@@ -37,6 +37,7 @@ return [
         'service'  =>  'index/index/service',
         'store'  =>  'index/index/store',
         'loading'  =>  'index/index/loading',
+        'storeindex'  =>  'index/index/storeindex',
     ],
 
 ];
